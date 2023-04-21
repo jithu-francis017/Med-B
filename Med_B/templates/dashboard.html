@@ -1,0 +1,334 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MED-B - dashboard</title>
+
+  <link rel = "icon" href = "{% static 'img/med-b-icon.png' %}" type = "image/png">
+	<!-- Bootstrap 5 CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="{% static 'dashboard/css/styles.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+
+
+	<style>
+		.carousel {
+			height: 25%;
+			width: 70%;
+			margin: auto;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+			background-color: white;
+		}
+
+    .dark-shadow {
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+      margin-bottom: 100px;
+      border-radius: 5px;
+      height: 25%;
+	    width: 70%;
+      text-align: center;
+		}
+
+    
+    .active {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .m{
+      margin: 20px auto;
+      padding: 20px 40px;
+    }
+
+    .card{
+      margin: 20px auto;
+      padding: 20px 40px;
+    }
+	</style>
+</head>
+<body>
+  
+  <header class="header" id="header">
+            <nav class="nav container">
+              <a href="{% url 'index' %}" class="nav__logo"><span class="fs-8">MED</span>-B</a>
+              <div class="nav__menu" id="nav-menu">
+              
+              
+              
+                
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class='bx bx-home-alt nav__icon'></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <!-- <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">Services</span>
+                            </a>
+                        </li> -->
+
+                        <li class="nav__item">
+                            <a href="#medications" class="nav__link">
+                                <i class='bx bx-book-alt nav__icon'></i>
+                                <span class="nav__name">Medications</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                          <a href="{% url 'upload'%}" class="nav__link">
+                              <i class='bx bx-book-alt nav__icon'></i>
+                              <span class="nav__name">MedRecords</span>
+                          </a>
+                      </li>
+
+                        
+
+                        <li class="nav__item">
+                          <a href="{% url 'profile' %}" class="nav__link">
+                              <i class='bx bx-briefcase-alt nav__icon'></i>
+                              <span class="nav__name">Profile</span>
+                          </a>
+                      </li>
+
+                        <li class="nav__item">
+                            <a href="{% url 'logout' %}" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                <span class="nav__name">Logout </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+           
+
+                <!-- <img src="assets/img/perfil.png" alt="" class="nav__img"> -->
+            </nav>
+        </header>
+
+  <br>
+  <div class="container">
+
+  <main>
+    <!--=============== HOME ===============-->
+    <section class="container section " id="home">
+      <div class="card dark-shadow">
+        <p id="date" style:"margin:0 display:inline;"></p>
+        <h1 id="greeting"></h1>
+        <h1>{{ user.username }}</h1>
+         
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--=============== SERVICES ===============-->
+    <section class="container section section__height" id="services">
+      <div class="container">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="">
+                <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5><b>Disease Prediction</b></h5>
+                  <p>Allows users to enter their symptoms and receive an accurate prediction about the disease they might be suffering from.</p>
+                </div>
+              </a>
+              
+            </div>
+            <div class="carousel-item">
+              <a href="">
+                <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Home remedies/Medicinal choice</h5>
+                  <p>Suggests alternative medicines for common illnesses such as common cold and flu, making it easier for users to select the right medicine for their condition. </p>
+                </div>
+              </a>
+              
+            </div>
+            <div class="carousel-item">
+              <a href="">
+                <img src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>AI Assistant</h5>
+                  <p>The AI assistant feature is an automated voice recognizing bot that helps sort records, schedule appointments, and provide reminders for medicine intakes.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <br>
+    </section>
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--=============== Medications ===============-->
+    <section class="container section section__height" id="medications">
+      <div class="m">
+        <h1>Medications</h1>
+      </div>
+      <div class="container"> 
+          <div class="row"> 
+              <div class="col-lg-6 mb-4"> 
+                  <div class="card"> 
+                      <img class="card-img-top" src="" alt=""> 
+                  <div class="card-body"> 
+                      <h5 class="card-title">Cetrizine</h5> 
+                        <p class="card-text"> 
+                            After breakfast. Not Taken. 
+                        </p> 
+                        <a href="#" class="btn btn-primary"> 
+                            Mark as Taken. 
+                        </a> 
+                  </div> 
+              </div> 
+          </div> 
+          <div class="col-lg-6 mb-4"> 
+              <div class="card"> 
+                  <img class="card-img-top" src="" alt=""> 
+                  <div class="card-body"> 
+                      <h5 class="card-title">Fluconazole</h5> 
+                        <p class="card-text">After breakfast. Not Taken</p> 
+                          <a href="#" class="btn btn-primary"> Mark as Taken </a> 
+                  </div> 
+              </div> 
+          </div> 
+        </div> 
+    </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+    
+    
+
+</main>
+</div>
+<div class="container">
+  <div class="chatbox-wrapper">
+		<div class="chatbox-toggle">
+			<i class='bx bx-message-dots'></i>
+		</div>
+		<div class="chatbox-message-wrapper">
+			<div class="chatbox-message-header">
+				<div class="chatbox-message-profile">
+					<img src="{% static 'img/med-b-icon.png' %}" alt="" class="chatbox-message-image">
+					<div>
+						<h4 class="chatbox-message-name">Med-B</h4>
+						<p class="chatbox-message-status">online</p>
+					</div>
+				</div>
+				<div class="chatbox-message-dropdown">
+					<i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+					<ul class="chatbox-message-dropdown-menu">
+						<li>
+							<a href="#">Search</a>
+						</li>
+						<li>
+							<a href="#">Report</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="chatbox-message-content">
+				<h4 class="chatbox-message-no-message">You don't have message yet!</h4>
+				<!-- <div class="chatbox-message-item sent">
+					<span class="chatbox-message-item-text">
+						Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+					</span>
+					<span class="chatbox-message-item-time">08:30</span>
+				</div>
+				<div class="chatbox-message-item received">
+					<span class="chatbox-message-item-text">
+						Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+					</span>
+					<span class="chatbox-message-item-time">08:30</span>
+				</div> -->
+			</div>
+			<div class="chatbox-message-bottom">
+				<form action="#" class="chatbox-message-form">
+					<textarea rows="1" placeholder="Type message..." class="chatbox-message-input"></textarea>&nbsp;&nbsp;&nbsp;
+					<button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	
+</div>
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'dashboard/js/main.js' %}"></script>
+  
+<script src="{% static 'dashboard/js/script.js' %}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.6/brython.js"></script>
+
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Get the current date
+    const now = new Date();
+    
+    // Get the month as a sentence
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[now.getMonth()];
+
+    // Get the time of day
+    const hour = now.getHours();
+    let timeOfDay;
+    if (hour < 12) {
+      timeOfDay = 'Good morning,';
+    } else if (hour < 18) {
+      timeOfDay = 'Good afternoon,';
+    } else {
+      timeOfDay = 'Good evening,';
+    }
+
+    // Format the date
+    const date = `Today,${now.getDate()}  ${month}  ${now.getFullYear()}`;
+
+    // Display the greeting and date
+    document.getElementById('greeting').textContent = timeOfDay;
+    document.getElementById('date').textContent = date;
+  </script>
+</body>
+</html>

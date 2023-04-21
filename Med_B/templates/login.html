@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block titleblock  %}Med-B - Login {% endblock %}
+
+{% block mybody %}
+  
+
+<div class="container" style="margin-top: 30px;">
+<form action="" method="POST">
+  {% csrf_token %}
+  <fieldset class="form-group">
+	  <legend class="border-bottom mb-4" style="color: white;">Sign In Now</legend>
+	  {{ form|crispy }}
+  </fieldset>
+  <div class="form-group" id="signup-button">
+	  <button class="btn " style="color: white;" >Log In</button>
+  </div>
+  <div class="form-group">
+	  <small class="text-muted ml-3" >Don't have an account yet? <a href="{% url 'register' %}">Sign Up Today</a></small>
+  </div>
+</form>
+</div>
+{% endblock %}

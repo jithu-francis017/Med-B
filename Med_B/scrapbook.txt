@@ -1,0 +1,22 @@
+https://www.mongodb.com/try/download/community
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'Med-B',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017/',
+            'username': 'Jithu',
+            'password': 'Jithu@123',
+            'authSource': 'admin',
+        },
+        'OPTIONS': {
+            'authMechanism': 'SCRAM-SHA-1',
+        },
+    }
+}
+
+
+C:\Program Files\MongoDB\Server\6.0\bin

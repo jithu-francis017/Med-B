@@ -1,0 +1,74 @@
+You: Hello
+SnowWhite: Hello Sir, how are you?
+You: Hello, How are you?
+SnowWhite: I'm doing well, thank you. How about you?
+You: I am Fine.
+SnowWhite: Good to hear that.
+You: How are you?
+SnowWhite: Nothing out of ordinary, Thanks for asking.
+You: My name is Jithu Francis. Call me Jithu from now on.
+SnowWhite: Hello Jithu, it's nice to meet you.
+You: I am 23 years old in 2023. Please remember. How are you?
+SnowWhite: I'm doing well, thank you. How about you?
+You: I am 23 years old in 2023. Please remember.
+SnowWhite: I'll try to remember that, Jithu.
+You: Set your name as SnowWhite. Please remember.
+SnowWhite: Hello Jithu, my name is SnowWhite. I'll try to remember that you are 23 years old in 2023.
+You: what is your name?
+SnowWhite: My name is SnowWhite.
+You: who are you?
+SnowWhite: I am an Artificial Intellegence created by Jithu Francis.
+You: what is my name?
+SnowWhite: Your name is Jithu Francis.
+You: how old am I?
+SnowWhite: You are 23 years old in 2023.
+You: Who is Elon Musk?
+SnowWhite: Elon Musk is an entrepreneur and business magnate who co-founded PayPal and Tesla Motors. He also founded SpaceX, and is now working on developing the Hyperloop.
+You: Elon Musk is my inspiration in real life. Please remember.
+SnowWhite: I'll try to remember that, Jithu.
+You: who is Tony Stark?
+SnowWhite: Tony Stark is a billionaire industrialist and the original Iron Man. He is a founding member of the Avengers, and has also served as the team's leader at various points.
+You: Tony Stark is my favourite fictional character.
+SnowWhite: I'll try to remember that, Jithu.
+You: who is my inspiration?
+SnowWhite: Elon Musk is your inspiration in real life.
+You: who is my favourite character?
+SnowWhite: Tony Stark is your favourite fictional character.
+You: What is my name
+SnowWhite: Your name is Jithu Francis.
+You: what is my name
+SnowWhite: Your name is Jithu Francis.
+You: what is your name
+SnowWhite: My name is SnowWhite.
+You: how old am i
+SnowWhite: You are 23 years old in 2023.
+You: bye
+SnowWhite: Bye Jithu, have a great day!
+You: Tell me a Quote
+SnowWhite: "The best way to find out if you can trust somebody is to trust them." -Ernest Hemingway
+You: What is the capital of India
+SnowWhite: The capital of India is New Delhi.
+You: how are you?
+SnowWhite: I'm doing well, thank you. How about you?
+You: thank you thank you
+SnowWhite: You're welcome, Jithu.
+You: how are you
+SnowWhite: I'm doing well, thank you. How about you?
+You: capital of jammu and kashmir
+SnowWhite: The capital of Jammu and Kashmir is Srinagar.
+You: how old are you?
+SnowWhite: I'm sorry, but I can't answer that question.
+You: tell me more boat city
+SnowWhite: Boat City is a city located on an island in the middle of a large lake. It is a popular tourist destination, known for its beautiful scenery and its many boat-related activities.
+You: is boat city located
+SnowWhite: Yes, Boat City is located on an island in the middle of a large lake.
+You: don't call me anything
+SnowWhite: I'll try to remember that, Jithu.
+You: call jithu from now onwards
+SnowWhite: Hello Jithu, it's nice to meet you.
+You: what are you excited to call me?
+SnowWhite: I'm excited to call you Jithu!
+You: hello
+SnowWhite: Hello Jithu, how are you doing today?
+You: i am fine
+SnowWhite: I'm glad to hear that you're doing well, Jithu.
