@@ -7,6 +7,7 @@ from .form import ImageForm
 from .models import Image
 from django.http import HttpResponse
 from django.core.exceptions import PermissionDenied
+from mimetypes import guess_type
 
 
 @login_required
@@ -42,10 +43,8 @@ def deleteImage(request,image_id):
 @login_required
 def downloadImage(request, image_id):
     image = Image.objects.get(id=image_id)
-    # Check if the current user is the owner of the image
-    if request.user != image.user:
-        raise PermissionDenied()
-    response = HttpResponse(image.image, content_type=image.content_type)
-
-    response['Content-Disposition'] = f'attachment; filename="{image.image.name}"'
+    file_name = image.image.name.split('/')[-1]
+    content_type = guess_type(file_name)[0]
+    response = HttpResponse(image.image, content_type=content_type)
+    response['Content-Disposition'] = f'attachment; filename="{image.caption}.jpg"'
     return response
