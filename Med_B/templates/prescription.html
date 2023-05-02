@@ -186,6 +186,10 @@
         {% for x in img %}
          <div class="Docs-item">
             <img src="{{x.image.url}}" height="70%" width="70%" class="img-thumbnail">
+            <div class="image-actions">
+                <a href="{% url 'download_image' x.id %}" class="btn btn-primary">Download</a>
+                <a href="{% url 'delete_image' x.id %}" class="btn btn-danger">Delete</a>
+            </div>
             <h2 class="caption">{{x.caption}}</h2>
          </div>
           <hr>

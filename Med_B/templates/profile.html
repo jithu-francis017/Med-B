@@ -3,9 +3,11 @@
 
 
 {% block mybody %}
+    
     <div class="container text-center">
         <br><br><br>
         <div>
+            <h1 style="color:blue">{{user.first_name}}'s Profile</h1>
             <h2 style="color:black">FIRSTNAME: {{user.first_name}}</h2>
             <h2 style="color:black">LASTNAME: {{user.last_name}}</h2>
             <h2 style="color:black">EMAIL: {{user.email}}</h2>
